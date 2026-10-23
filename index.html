@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080a18">
+  <title>NEON AI — Your AI Space</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="ambient ambient-a"></div><div class="ambient ambient-b"></div>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand">
+        <div class="brand-mark"><span>✦</span></div>
+        <div><div class="brand-name">NEON<span>AI</span></div><div class="brand-caption">YOUR AI SPACE</div></div>
+        <button class="icon-btn mobile-close" id="closeSidebar" aria-label="Tutup menu">×</button>
+      </div>
+      <button class="new-chat" id="newChat"><span>＋</span> Chat baru</button>
+      <div class="side-label">RIWAYAT CHAT <button class="tiny-btn" id="clearHistory" title="Hapus semua riwayat">Hapus</button></div>
+      <div class="history-list" id="historyList"></div>
+      <div class="sidebar-bottom">
+        <div class="status-row"><span class="status-dot"></span><span id="connectionLabel">Memeriksa koneksi…</span></div>
+        <div class="usage-card">
+          <div class="usage-head"><span>Penggunaan hari ini</span><span id="usageText">—</span></div>
+          <div class="usage-track"><div id="usageBar"></div></div>
+          <p>Kuota website bisa diatur oleh pemilik server. Batas provider tetap berlaku.</p>
+        </div>
+        <div class="profile"><div class="avatar">N</div><div><strong>Neon AI</strong><small id="modelLabel">Model AI</small></div><span class="profile-spark">✧</span></div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <button class="icon-btn menu-btn" id="openSidebar" aria-label="Buka menu">☰</button>
+        <div class="mobile-brand">✦ NEON<span>AI</span></div>
+        <div class="top-pill"><span class="status-dot"></span> AI ONLINE</div>
+        <button class="top-new" id="topNew">＋ <span>Chat baru</span></button>
+      </header>
+
+      <section class="chat-area" id="chatArea">
+        <div class="welcome" id="welcome">
+          <div class="orb-wrap"><div class="orb"><span>✦</span></div><div class="orb-ring ring-one"></div><div class="orb-ring ring-two"></div></div>
+          <div class="eyebrow"><span></span> INTELLIGENCE, REIMAGINED <span></span></div>
+          <h1>Halo, apa yang ingin<br>kamu <span class="gradient-text">jelajahi?</span></h1>
+          <p class="welcome-copy">Tanyakan apa saja, kembangkan ide, atau mulai sesuatu yang baru.<br>Ruang AI kamu dimulai dari sini.</p>
+          <div class="suggestions">
+            <button class="suggestion" data-prompt="Bantu aku membuat ide proyek elektronik ESP32 yang menarik."><span class="suggestion-icon purple">⌘</span><span><strong>Ide kreatif</strong><small>Temukan kemungkinan baru</small></span><b>↗</b></button>
+            <button class="suggestion" data-prompt="Jelaskan topik yang sulit dengan bahasa sederhana dan contoh."><span class="suggestion-icon blue">◈</span><span><strong>Belajar sesuatu</strong><small>Ubah rumit jadi mudah</small></span><b>↗</b></button>
+            <button class="suggestion" data-prompt="Bantu aku menyusun rencana untuk proyek yang ingin aku mulai."><span class="suggestion-icon pink">✧</span><span><strong>Susun rencana</strong><small>Langkah demi langkah</small></span><b>↗</b></button>
+            <button class="suggestion" data-prompt="Buatkan contoh kode sederhana dan jelaskan cara kerjanya."><span class="suggestion-icon cyan">{ }</span><span><strong>Bantu coding</strong><small>Bangun sesuatu yang nyata</small></span><b>↗</b></button>
+          </div>
+        </div>
+        <div class="messages" id="messages" aria-live="polite"></div>
+      </section>
+
+      <footer class="composer-wrap">
+        <div class="composer" id="composer">
+          <textarea id="messageInput" rows="1" placeholder="Ketik pesan untuk Neon AI…" aria-label="Pesan untuk AI"></textarea>
+          <div class="composer-bottom"><span class="composer-hint"><span>✦</span> AI bisa saja keliru. Periksa informasi penting.</span><button id="sendBtn" class="send-btn" aria-label="Kirim pesan"><span>➤</span></button></div>
+        </div>
+        <div class="footer-note">NEON AI <span>•</span> Dibuat untuk ide tanpa batas*</div>
+      </footer>
+    </main>
+  </div>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="/app.js"></script>
+</body>
+</html>
